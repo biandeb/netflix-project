@@ -8,6 +8,18 @@
     all: unset;
 }
 
+.btn-service-footer{
+    background-color: transparent;
+    color: rgb(108,117,125);
+    border: 1px solid rgb(108,117,125);
+    text-decoration: none;
+    padding: 0.4rem;
+    
+    &:hover{
+        color: #f9f9f9;
+    }
+}
+
 .btn-admin{
     background-color: #E50914;
     color: #f9f9f9;
@@ -15,17 +27,5 @@
     &:hover{
         color: #000000;
         background-color: #f9f9f9;
-    }
-}
-
-.btn-service-footer{
-    background-color: transparent;
-    color: rgb(108,117,125);
-    border: 1px solid rgb(108,117,125);
-    text-decoration: none;
-    padding: 0.4rem;
-
-    &:hover{
-        color: #f9f9f9;
     }
 }
