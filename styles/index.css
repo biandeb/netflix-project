@@ -3,3 +3,11 @@
 * {
     font-family: 'Nunito', sans-serif;
   }
+
+  .unset{
+    all: unset;
+  }
+
+  .btn-login{
+    background-color: #E50914;
+  }
