@@ -4,10 +4,10 @@
     font-family: 'Nunito', sans-serif;
   }
 
-  .unset{
-    all: unset;
-  }
+.unset{
+  all: unset;
+}
 
-  .btn-login{
-    background-color: #E50914;
-  }
+.btn-login{
+  background-color: #E50914;
+}
