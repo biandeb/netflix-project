@@ -30,6 +30,12 @@ footer{
   padding: 1rem 0 0.5rem 0;
 }
 
+body{
+  display: flex !important;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .btn-login{
   background-color: #E50914;
 }
