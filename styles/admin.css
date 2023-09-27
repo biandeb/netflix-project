@@ -1,0 +1,16 @@
+.btn-save{
+    background-color: #E50914;
+    color: #f9f9f9;
+
+    &:hover{
+        background-color: #e5091470;
+        color: #f9f9f9;
+    }
+}
+
+@media (max-width: 768px) {
+    .custom-swal{
+      width: 100%;
+      background: none !important;
+    };
+  };
