@@ -71,6 +71,8 @@ import {
         timer: 2000,
         timerProgressBar: false,
         showConfirmButton: false,
+        color: '#f9f9f9',
+        background: '#202020'
       });
       return;
     }
@@ -94,6 +96,8 @@ import {
       timer: 1500,
       timerProgressBar: false,
       showConfirmButton: false,
+      color: '#f9f9f9',
+      background: '#202020'
     });
   
     // 7. Ocultar warning de edicion
@@ -114,6 +118,8 @@ import {
         showCancelButton: true,
         cancelButtonText: 'Cancelar',
         confirmButtonText: 'Sí, eliminar',
+        color: '#f9f9f9',
+        background: '#202020'
       })
       .then((action) => {
         if (action.isConfirmed) {
