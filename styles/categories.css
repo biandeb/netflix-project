@@ -28,3 +28,10 @@
     }
 }
 
+@media (max-width: 768px) {
+    .custom-swal{
+      width: 100%;
+      background: none !important;
+    };
+  };
+

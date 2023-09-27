@@ -10,6 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script defer src="https://kit.fontawesome.com/cce9db0489.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../styles/categories.css">
     <link rel="stylesheet" href="../../styles/index.css">
     <title>Netflix | Admin-Categorías</title>
@@ -46,6 +47,19 @@
         <article id="alert-categories" class="d-none alert alert-danger mb-2">
             <p class="mb-0 text-light d-inline">¡Categoría existente!</p>
         </article>
+        <article id="alert-editing" class="d-none text-warning mb-1">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <p class="d-inline">
+              Estás editando la categoría
+              <span id="category-being-edited" class="fw-bold"></span>.
+            </p>
+            <button
+              class="unset text-light text-decoration-none fw-bold"
+              id="cancel-edition-button"
+            >
+              Cancelar edición.
+            </button>
+          </article>
         <form id="form-categories" class="d-flex gap-2">
             <fieldset class="form-floating fw-bold text-secondary w-100">
                 <input placeholder="" type="text" class="form-control" id="category-input" required minlength="2" maxlength="30">
