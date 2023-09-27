@@ -20,6 +20,16 @@
   }
 }
 
+main{
+  flex: 1 0 auto;
+  overflow: hidden;
+}
+
+footer{
+  flex-shrink: 0;
+  padding: 1rem 0 0.5rem 0;
+}
+
 .btn-login{
   background-color: #E50914;
 }
