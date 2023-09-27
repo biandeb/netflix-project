@@ -18,9 +18,8 @@ body{
     height: 700px;
 }
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
     .login-section{
         width: 100%;
-        padding: 1rem 1rem;
     }
-} */
+}
