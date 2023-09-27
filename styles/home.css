@@ -1,9 +1,0 @@
-.btn-admin{
-    background-color: #E50914;
-    color: #f9f9f9;
-    
-    &:hover{
-        color: #000000;
-        background-color: #f9f9f9;
-    }
-}
