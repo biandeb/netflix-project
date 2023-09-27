@@ -76,11 +76,16 @@ const prepareContentEdition = (contentId) => {
   };
 };
 
-export const createContentRow = (content) => {
+export const createContentRow = (content,index) => {
   const contentTable = document.getElementById('content-table');
+  contentTable.classList.add('text-center');
   const contentTableBody = contentTable.querySelector('tbody');
 
   const contentRow = document.createElement('tr');
+
+  const tdIndex = document.createElement('td');
+  tdIndex.innerText = index;
+  tdIndex.classList.add('text-center');
 
   const coverCell = document.createElement('td');
   const coverImg = document.createElement('img');
@@ -110,7 +115,7 @@ export const createContentRow = (content) => {
   trailerLink.href = content.trailer;
   trailerLink.target = '_blank';
   trailerLink.innerText = 'Ver trailer';
-  trailerLink.classList.add('btn', 'btn-light');
+  trailerLink.classList.add('btn', 'btn-trailer-content', 'fw-bold');
   trailerCell.appendChild(trailerLink);
 
   const descriptionCell = document.createElement('td');
@@ -129,14 +134,14 @@ export const createContentRow = (content) => {
   const actionsCell = document.createElement('td');
 
   const editButton = document.createElement('button');
-  editButton.classList.add('btn', 'btn-warning', 'mb-2', 'd-block');
+  editButton.classList.add('btn', 'mb-2', 'd-inline', 'me-2', 'my-2', 'btn-edit-content');
   const editIcon = document.createElement('i');
   editIcon.classList.add('fa-solid', 'fa-pencil');
   editButton.appendChild(editIcon);
   editButton.onclick = () => prepareContentEdition(content.id);
 
   const deleteButton = document.createElement('button');
-  deleteButton.classList.add('btn', 'btn-danger');
+  deleteButton.classList.add('btn', 'btn-delete-content');
   const deleteIcon = document.createElement('i');
   deleteIcon.classList.add('fa-solid', 'fa-trash');
   deleteButton.appendChild(deleteIcon);
@@ -145,6 +150,7 @@ export const createContentRow = (content) => {
   actionsCell.appendChild(editButton);
   actionsCell.appendChild(deleteButton);
 
+  contentRow.appendChild(tdIndex);
   contentRow.appendChild(coverCell);
   contentRow.appendChild(nameCell);
   contentRow.appendChild(typeCell);
@@ -171,8 +177,8 @@ export const loadContentTable = () => {
     noContentTitle.classList.add('d-none');
   }
 
-  contentList.forEach((content) => {
-    createContentRow(content);
+  contentList.forEach((content, index) => {
+    createContentRow(content, index+1);
   });
 };
 

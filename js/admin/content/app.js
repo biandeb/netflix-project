@@ -28,7 +28,7 @@ import {
   // 2. Cargar listado de contenido
   // -----------------------------------------
   
-  // loadContentTable();
+  loadContentTable();
   
   // -----------------------------------------
   // 3. Cargar categorias en select

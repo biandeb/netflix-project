@@ -2,8 +2,8 @@
 
 import { generateRandomId } from '../../utilities.js';
 
-export class Content {
-  constructor(name, type, category, cover, trailer, description, isPublished) {
+export class Content{
+  constructor(name, type, category, cover, trailer, description, isPublished){
     this.id = generateRandomId();
     this.name = name;
     this.typeId = type;

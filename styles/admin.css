@@ -14,3 +14,40 @@
       background: none !important;
     };
   };
+
+.admin-table__cover {
+  width: 100px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.btn-delete-content{
+  background-color: #E50914;
+    color: #000000;
+
+    &:hover{
+        background-color: #e5091470;
+        color: #f9f9f9;
+    }
+}
+
+.btn-edit-content{
+  background-color: #facb31;
+  color: #000000;
+
+    &:hover{
+        background-color: #a07c05;
+        color: #f9f9f9;
+    }
+}
+
+.btn-trailer-content{
+  background-color: #E50914;
+    color: #000000;
+
+    &:hover{
+        background-color: #e5091470;
+        color: #f9f9f9;
+    }
+}
