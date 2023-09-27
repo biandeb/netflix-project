@@ -63,17 +63,20 @@ formLogin.addEventListener('submit', (e) => {
       sessionStorage.setItem('user', JSON.stringify(loggedUser));
 
       // 4. Mensaje de exito
-      swal
-        .fire({
-          title: 'Bienvenido',
-          timer: 1500,
-          timerProgressBar: true,
-          showConfirmButton: false,
-        })
-        .then(() => {
-          // 5. Redireccion a admin
-          window.location.href = './admin/admin.html';
-        });
+      swal.fire({
+        title: 'BIENVENIDO',
+        timer: 3000,
+        text: '¡Qué alegría verte de nuevo!',
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Netflix_logo.svg/2560px-Netflix_logo.svg.png',
+        imageWidth: 400,
+        imageHeight: 200,
+        imageAlt: 'foto bienvenida Netflix',
+        showConfirmButton: false,
+      })
+      .then(() => {
+        // 5. Redireccion a admin
+        window.location.href = '../admin/admin.html';
+    });
     } else {
       // Credenciales no validas
       credentialsAlert.classList.remove('d-none');
