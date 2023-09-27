@@ -48,9 +48,13 @@
     </header>
     <main class="d-flex justify-content-center align-items-center">
         <section class="login-section p-4">
-            <form>
+            <form id="form-login">
                 <article class="p-5">
                     <h1 class="text-light mb-4 mt-2 fw-bold">Iniciar sesión</h1>
+                    <article id="credentials-alert" class="d-none alert alert-warning mb-2">
+                        <p class="mb-0 text-light d-inline"><strong>Contraseña incorrecta</strong>. Reinténtalo o 
+                            <a href="./error404.html">restablece la contraseña.</a></p>
+                    </article>
                     <fieldset class="form-floating mb-4 fw-bold text-secondary">
                     <input placeholder="" type="text" class="form-control" id="email-login" required minlength="4" maxlength="40">
                     <label for="email-login">Email o número de teléfono</label>
@@ -87,5 +91,6 @@
     </section>
     </main>
     <footer></footer>
+    <script type="module" src="../js/login/app.js"></script>
 </body>
 </html>
