@@ -12,7 +12,7 @@ import { loadCategoriesList } from './utilities.js';
 const isLogged = JSON.parse(sessionStorage.getItem('isLogged'));
 if (!isLogged) {
   // No deberia poder ver la página
-  window.location.href = '../login.html';
+  window.location.href = '../../pages/login.html';
 }
 
 // -----------------------------------------

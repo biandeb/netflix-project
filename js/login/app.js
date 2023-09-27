@@ -74,10 +74,12 @@ formLogin.addEventListener('submit', (e) => {
         imageHeight: 200,
         imageAlt: 'foto bienvenida Netflix',
         showConfirmButton: false,
+        background: '#202020',
+        color: '#f9f9f9',
       })
       .then(() => {
         // 5. Redireccion a admin
-        window.location.href = '../admin/admin.html';
+        window.location.href = './admin/admin.html';
     });
     } else {
       // Credenciales no validas
