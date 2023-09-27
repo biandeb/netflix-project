@@ -71,7 +71,6 @@ formCategories.addEventListener('submit', (e) => {
     } else {
       createCategory(category);
     }
-
     // 3. Resetear formulario
     formCategories.reset();
 

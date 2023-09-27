@@ -31,6 +31,7 @@ swal.fire({
     timerProgressBar: false,
     showConfirmButton: false,
   });
+  loadCategoriesList();
 };
   
   export const editCategory = (name) => {
@@ -60,15 +61,20 @@ swal.fire({
         color: '#f9f9f9',
     });
 
+    // 7. Recargar listado
     loadCategoriesList();
-    categoriesInput.classList.remove('is-valid');
 
-    // 7. Ocultar warning de edicion
+    // falta limpiar formulario y quitar clase is-valid
+
+    // 8. Ocultar warning de edicion
     const editingWarning = document.getElementById('alert-editing');
     editingWarning.classList.add('d-none');
+
+    categoriesInput.classList.remove('is-valid');
   
-    // 8. Limpiar id del sessionStorage
+    // 9. Limpiar id del sessionStorage
     sessionStorage.removeItem('categoryId');
+    
   };
     
   
@@ -109,7 +115,7 @@ swal.fire({
   
           // 6. Recargar datos en tabla
           loadCategoriesList();
+          formCategories.reset();
         }
     });
-    categoriesInput.classList.remove('is-valid');
 };
