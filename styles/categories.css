@@ -1,10 +1,9 @@
-
-.btn-admin-logout{
+.btn-save{
     background-color: #E50914;
     color: #f9f9f9;
-    
+
     &:hover{
-        color: #000000;
-        background-color: #f9f9f9;
+        background-color: #e5091470;
+        color: #f9f9f9;
     }
 }

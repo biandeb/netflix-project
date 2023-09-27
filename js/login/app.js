@@ -1,3 +1,5 @@
+'use strict'
+
 import { User, UserWithoutPassword } from './User.js';
 import { validatePassword, validateEmail } from '../validators.js';
 
@@ -65,7 +67,7 @@ formLogin.addEventListener('submit', (e) => {
       // 4. Mensaje de exito
       swal.fire({
         title: 'BIENVENIDO',
-        timer: 3000,
+        timer: 1500,
         text: '¡Qué alegría verte de nuevo!',
         imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Netflix_logo.svg/2560px-Netflix_logo.svg.png',
         imageWidth: 400,
