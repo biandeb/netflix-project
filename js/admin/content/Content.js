@@ -12,5 +12,6 @@ export class Content{
     this.trailer = trailer;
     this.description = description;
     this.isPublished = isPublished;
+    this.isFeatured = false;
   }
 }

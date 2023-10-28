@@ -5,10 +5,17 @@ import {
     createCategorySection,
     getCategoriesFromLS,
     getContentFromLS,
+    loadFeatured,
   } from './utilities.js';
   
   // ------------------------------
-  // 1. Cargar elementos
+  // 1. Cargar destacada
+  // ------------------------------
+
+  loadFeatured();
+
+  // ------------------------------
+  // 2. Cargar contenido
   // ------------------------------
   
   const categories = getCategoriesFromLS();

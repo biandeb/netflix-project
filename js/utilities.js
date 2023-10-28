@@ -18,7 +18,7 @@ export const getCategoriesFromLS = () => {
   
   const createContentElement = (content) => {
     const link = document.createElement('a');
-    link.classList.add('content-element', 'me-2', 'd-inline-block', 'mb-2');
+    link.classList.add('content-element', 'me-4', 'd-inline-block', 'mb-2');
     link.href = `./pages/detail.html?id=${content.id}`;
   
     const firstDiv = document.createElement('div');
@@ -119,6 +119,13 @@ export const getCategoriesFromLS = () => {
           iframe.setAttribute('src', modifiedSrc);
         }, 1200);
       });
+    });
+  };
+
+  export const loadFeatured = () => {
+    const contentList = getContentFromLS();
+    const content = contentList.find((content) => {
+      return content.isFeatured;
     });
   };
   

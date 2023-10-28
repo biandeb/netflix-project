@@ -11,13 +11,13 @@ const logoutButton = document.getElementById('logout-button');
 // -----------------------------------------
 
 logoutButton.addEventListener('click', (e) => {
-  swal
-    .fire({
+  swal.fire({
       title: '¿Estás seguro?',
       text: 'Cerrarás tu sesión',
+      icon: 'warning',
+      showCancelButton: true,
       confirmButtonText: 'Sí, salir',
       cancelButtonText: 'Cancelar',
-      showCancelButton: true,
     })
     .then((result) => {
       if (result.isConfirmed) {
@@ -26,7 +26,6 @@ logoutButton.addEventListener('click', (e) => {
         sessionStorage.removeItem('user');
 
         // 2. Redireccionar
-        window.location.href = '/';
       }
     });
 });

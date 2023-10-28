@@ -76,6 +76,49 @@ const prepareContentEdition = (contentId) => {
   };
 };
 
+const changeFeaturedMovie = (contentId) => {
+  const contentList = getContentFromLS();
+  const contentIndex = contentList.findIndex(
+    (content) => content.id === contentId);
+    if (!contentList[contentIndex].isFeatured) {
+      if (!contentList[contentIndex].isPublished) {
+        swal.fire({
+          title: 'Atención',
+          text: 'No se puede destacar un contenido no publicado',
+          icon: 'warning',
+          confirmButtonText: 'Aceptar',
+        });
+        return;
+      }
+    }
+  
+    if (contentList[contentIndex].isFeatured) {
+      contentList[contentIndex].isFeatured = false;
+    } else {
+      // Sacar el destacado de TODAS las peliculas/series
+      contentList.forEach((content) => {
+        content.isFeatured = false;
+      });
+  
+      contentList[contentIndex].isFeatured = true;
+    }
+  
+    localStorage.setItem('contents', JSON.stringify(contentList));
+  
+    loadContentTable();
+  };
+
+  // contentList[contentIndex].isFeatured = !contentList[contentIndex].isFeatured;
+
+  // const icon = document.getElementById(`highlight-icon-${contentId}`);
+  // icon.classList.remove('fa-solid', 'fa-regular');
+  // icon.classList.add(
+  //   contentList[contentIndex].isFeatured ? 'fa-solid' : 'fa-regular');
+
+
+  // localStorage.setItem('contents', JSON.stringify(contentList));
+// }
+
 export const createContentRow = (content,index) => {
   const contentTable = document.getElementById('content-table');
   contentTable.classList.add('text-center');
@@ -141,14 +184,28 @@ export const createContentRow = (content,index) => {
   editButton.onclick = () => prepareContentEdition(content.id);
 
   const deleteButton = document.createElement('button');
-  deleteButton.classList.add('btn', 'btn-delete-content');
+  deleteButton.classList.add('btn', 'btn-delete-content', 'me-2');
   const deleteIcon = document.createElement('i');
   deleteIcon.classList.add('fa-solid', 'fa-trash');
   deleteButton.appendChild(deleteIcon);
   deleteButton.onclick = () => deleteContent(content.id);
 
+  const highlightButton = document.createElement('button');
+  highlightButton.classList.add('btn', 'btn-secondary');
+  const highlightIcon = document.createElement('i');
+  highlightIcon.classList.add(
+    content.isFeatured ? 'fa-solid' : 'fa-regular',
+    'fa-star'
+  );
+  highlightButton.appendChild(highlightIcon);
+  highlightButton.onclick = () => {
+    changeFeaturedMovie(content.id);
+  };
+
+
   actionsCell.appendChild(editButton);
   actionsCell.appendChild(deleteButton);
+  actionsCell.appendChild(highlightButton);
 
   contentRow.appendChild(tdIndex);
   contentRow.appendChild(coverCell);
