@@ -4,6 +4,7 @@ import {
     contentElementInteractivity,
     createCategorySection,
     getCategoriesFromLS,
+    getContentFromLS,
   } from './utilities.js';
   
   // ------------------------------
@@ -11,6 +12,7 @@ import {
   // ------------------------------
   
   const categories = getCategoriesFromLS();
+  const content = getContentFromLS();
   
   categories.forEach((category) => {
     createCategorySection(category);
